@@ -1,0 +1,14 @@
+{% extends 'todoapp/base.html'%}
+{% block title%}Add ToDo{%endblock%}
+{% block body%}
+<div class="todo-container">
+
+    <h1>Add a new ToDo</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="Enter task name" required>
+        <button class="add-btn" type="submit">Add</button>
+    </form>
+    <a class="btn" href="{% url 'index' %}">Back to list</a>
+</div>
+{%endblock%}
