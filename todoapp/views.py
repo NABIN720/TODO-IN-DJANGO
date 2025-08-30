@@ -1,5 +1,4 @@
 from django.shortcuts import render,redirect
-from httpx import delete
 from .models import Todo
 
 # Create your views here.
